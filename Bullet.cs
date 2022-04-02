@@ -27,7 +27,6 @@ public class Bullet : MonoBehaviour
             block.Break();
             Destroy(gameObject);
         }
-        
         if (other.TryGetComponent(out Obstacle obstacle))
             Bounce();
     }
