@@ -6,7 +6,9 @@ using UnityEngine.Events;
 public class Block : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _destroyEffect;
+    
     private MeshRenderer _meshRenderer;
+    
     public event UnityAction<Block> BulletHit;
     
     private void Awake()
