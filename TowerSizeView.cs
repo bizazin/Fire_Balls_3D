@@ -12,10 +12,12 @@ public class TowerSizeView : MonoBehaviour
     {
         _tower.SizeUpdated += OnSizeUpdated;
     }
+    
     private void OnDisable()
     {
         _tower.SizeUpdated -= OnSizeUpdated;
     }
+    
     private void OnSizeUpdated(int size)
     {
         _sizeView.text = size.ToString();
