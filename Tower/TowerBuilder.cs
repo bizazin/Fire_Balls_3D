@@ -10,10 +10,12 @@ public class TowerBuilder : MonoBehaviour
     [SerializeField] private Color[] _colors;
  
     private List<Block> _blocks;
+    
     private Block BuildBlock(Transform currentBuildPoint)
     {
         return Instantiate(_block, GetBuildPoint(currentBuildPoint), Quaternion.identity, _buildPoint);
     }
+    
     private Vector3 GetBuildPoint(Transform currentSegment)
     {
         var errorOfProBuilder = 0.48f;
@@ -22,6 +24,7 @@ public class TowerBuilder : MonoBehaviour
             currentSegment.position.y + errorOfProBuilder*(currentSegment.localScale.y + _block.transform.localScale.y), 
             _buildPoint.position.z);
     }
+    
     public List<Block> Build()
     {
         _blocks = new List<Block>();
