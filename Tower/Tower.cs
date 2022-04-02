@@ -10,6 +10,7 @@ public class Tank : MonoBehaviour
     [SerializeField] private float _recoilDistance;
 
     private float _timeAfterShoot;
+    
     private void Update()
     {
         _timeAfterShoot += Time.deltaTime;
@@ -21,6 +22,7 @@ public class Tank : MonoBehaviour
             _timeAfterShoot = 0;
         }
     }
+    
     private void Shoot()
     {
         Instantiate(_bulletTemplate, _shootPoint.position, Quaternion.identity);
